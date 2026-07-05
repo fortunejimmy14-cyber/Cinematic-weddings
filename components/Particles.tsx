@@ -1,17 +1,33 @@
-export default function Particles() {
-  const arr = Array.from({ length: 20 });
+export default function Gallery() {
   return (
-    <>
-      {arr.map((_, i) => (
-        <div
-          key={i}
-          className='particle'
-          style={{
-            left: Math.random() * 100 + '%',
-            animationDuration: 5 + Math.random() * 5 + 's',
-          }}
-        />
-      ))}
-    </>
+    <section style={{ padding: 100 }}>
+      <h2 style={{ textAlign: "center" }}>Gallery</h2>
+
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+        gap: 15,
+        marginTop: 40
+      }}>
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+            key={i}
+            style={{
+              height: 180,
+              borderRadius: 16,
+              background: "#1a1a1a",
+              transition: "0.3s",
+              cursor: "pointer"
+            }}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.05)")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.transform = "scale(1)")
+            }
+          />
+        ))}
+      </div>
+    </section>
   );
 }
