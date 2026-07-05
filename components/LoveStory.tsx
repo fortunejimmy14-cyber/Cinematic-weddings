@@ -1,28 +1,32 @@
-'use client';
-import { motion } from 'framer-motion';
-
 export default function LoveStory() {
-  const items = [
-    'How we met',
-    'First conversation',
-    'First date',
-    'Forever begins',
-  ];
-
   return (
-    <section style={{ padding: 40 }}>
-      <h2 style={{ fontSize: 40, fontFamily: 'serif' }}>Our Love Story</h2>
-      {items.map((i, idx) => (
-        <motion.p
-          key={idx}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: idx * 0.2 }}
-          style={{ opacity: 0.8, marginTop: 10 }}
-        >
-          {i}
-        </motion.p>
-      ))}
+    <section style={{ padding: "120px 30px" }}>
+      <h2 style={{ fontSize: 40, textAlign: "center" }}>
+        Our Love Story
+      </h2>
+
+      <div style={{
+        maxWidth: 800,
+        margin: "60px auto",
+        display: "flex",
+        flexDirection: "column",
+        gap: 40
+      }}>
+        <div className="glass">
+          <h3>Chapter 1 — The Beginning</h3>
+          <p>Two strangers. One unexpected connection.</p>
+        </div>
+
+        <div className="glass">
+          <h3>Chapter 2 — The Journey</h3>
+          <p>Every moment brought us closer together.</p>
+        </div>
+
+        <div className="glass">
+          <h3>Chapter 3 — Forever</h3>
+          <p>And now… we become one.</p>
+        </div>
+      </div>
     </section>
   );
 }
