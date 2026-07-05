@@ -1,10 +1,18 @@
 export default function Venue() {
   return (
-    <section style={{ padding: 40 }}>
-      <h2>Venue</h2>
-      <p>Traditional Marriage - Kano</p>
-      <p>Church Wedding - Kano</p>
-      <p>Reception - Meena Event Center</p>
+    <section style={{ padding: 100 }}>
+      <h2 style={{ textAlign: "center" }}>Venue Details</h2>
+
+      <div style={{
+        display: "grid",
+        gap: 20,
+        maxWidth: 700,
+        margin: "40px auto"
+      }}>
+        <div className="glass">Traditional Marriage — Kano</div>
+        <div className="glass">Church Wedding — Kano</div>
+        <div className="glass">Reception — Event Center</div>
+      </div>
     </section>
   );
 }
